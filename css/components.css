@@ -1,0 +1,199 @@
+/* Card Styles */
+.card {
+    background: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(44, 123, 229, 0.08);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(44, 123, 229, 0.12);
+}
+
+/* Button Styles */
+.cta-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: var(--primary-blue);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+.cta-button:hover {
+    background: var(--secondary-blue);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(44, 123, 229, 0.2);
+}
+
+/* Form Styles */
+.wpcf7-form {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.wpcf7-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.wpcf7-form input[type="text"],
+.wpcf7-form input[type="email"],
+.wpcf7-form input[type="tel"],
+.wpcf7-form textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    background: var(--white);
+}
+
+.wpcf7-form input:focus,
+.wpcf7-form textarea:focus {
+    border-color: var(--secondary-blue);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(44, 123, 229, 0.1);
+}
+
+.wpcf7-submit {
+    background: var(--primary-blue);
+    color: var(--white);
+    padding: 1rem 2rem;
+    border: 2px solid var(--primary-blue);
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    letter-spacing: 0.3px;
+    width: 100%;
+}
+
+.wpcf7-submit:hover {
+    background: var(--white);
+    color: var(--primary-blue);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(44, 123, 229, 0.15);
+}
+
+/* Statistics Card */
+.stat-card {
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    background: rgba(0, 0, 0, 0.25);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.stat-number {
+    font-size: 4.5rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+    color: var(--white);
+    letter-spacing: -0.5px;
+    line-height: 1;
+}
+
+.stat-label {
+    font-size: 1.3rem;
+    color: var(--white);
+    font-weight: 600;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    letter-spacing: 0.5px;
+    opacity: 0.95;
+}
+
+/* Property Card */
+.property-card {
+    background: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(44, 123, 229, 0.08);
+    transition: all 0.3s ease;
+}
+
+.property-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(44, 123, 229, 0.12);
+}
+
+.property-image {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.property-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.property-card:hover .property-image img {
+    transform: scale(1.1);
+}
+
+.property-tag {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: var(--secondary-blue);
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.property-content {
+    padding: 1.5rem;
+}
+
+/* Feature Card */
+.feature-card {
+    background: var(--white);
+    padding: 2.5rem 2rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(44, 123, 229, 0.08);
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(44, 123, 229, 0.12);
+}
+
+.feature-icon {
+    width: 80px;
+    height: 80px;
+    background: var(--accent-blue);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+}
+
+.feature-icon i {
+    font-size: 2rem;
+    color: var(--secondary-blue);
+} 

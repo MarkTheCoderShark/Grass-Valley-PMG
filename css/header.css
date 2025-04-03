@@ -1,0 +1,224 @@
+/* Header Styles */
+.site-header {
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+    box-shadow: 0 4px 20px rgba(44, 123, 229, 0.15);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    padding: 0.75rem 0;
+    top: 0;
+    left: 0;
+    transition: all 0.3s ease;
+}
+
+/* Adjust header position when WordPress admin bar is present */
+.admin-bar .site-header {
+    top: 32px;
+}
+
+@media screen and (max-width: 782px) {
+    .admin-bar .site-header {
+        top: 46px; /* WordPress adds a taller admin bar on mobile */
+    }
+}
+
+.site-header.scrolled {
+    padding: 0.75rem 0;
+    top: 0;
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 15px rgba(44, 123, 229, 0.2);
+}
+
+.header-content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    padding: 0 1rem;
+}
+
+.site-branding {
+    display: flex;
+    align-items: center;
+    min-width: 160px;
+    margin-right: 3rem;
+}
+
+.site-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.35rem;
+    margin: 0;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    color: var(--white);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    line-height: 1;
+    text-decoration: none;
+}
+
+.site-title span {
+    display: block;
+    font-size: 1.75rem;
+    letter-spacing: -1px;
+}
+
+/* Navigation Styles */
+.main-navigation {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    justify-content: flex-start;
+    gap: 0.5rem;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.nav-menu li {
+    position: relative;
+}
+
+.nav-menu a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.75rem;
+    padding: 0.5rem 0;
+    transition: all 0.3s ease;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    opacity: 0.9;
+    white-space: nowrap;
+}
+
+.nav-menu a:hover {
+    opacity: 1;
+}
+
+.nav-menu a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--white);
+    transition: width 0.3s ease;
+}
+
+.nav-menu a:hover::after {
+    width: 100%;
+}
+
+.header-cta {
+    margin-left: auto;
+    margin-right: 1rem;
+}
+
+.header-cta .cta-button {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.8rem;
+    border-radius: 6px;
+    background: var(--white);
+    color: var(--primary-blue);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.header-cta .cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+@media screen and (max-width: 1200px) {
+    .header-content {
+        padding: 0 1rem;
+    }
+    
+    .site-branding {
+        margin-right: 2rem;
+    }
+    
+    .nav-menu {
+        gap: 1.25rem;
+    }
+    
+    .nav-menu a {
+        font-size: 0.75rem;
+    }
+    
+    .header-cta .cta-button {
+        padding: 0.6rem 1rem;
+        font-size: 0.75rem;
+    }
+}
+
+/* Responsive Navigation */
+@media screen and (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+    
+    body.menu-open {
+        overflow: hidden;
+    }
+    
+    .header-content {
+        position: relative;
+        justify-content: center;
+    }
+    
+    .site-branding {
+        margin-right: auto;
+    }
+    
+    .main-navigation {
+        display: none;
+    }
+
+    .header-cta {
+        display: none;
+    }
+    
+    /* Ensure the mobile menu button is visible */
+    #fallback-mobile-menu {
+        display: block !important;
+        position: fixed !important;
+        right: 20px !important;
+        top: 25px !important;
+        z-index: 999999 !important;
+        background: #1e73be !important;
+        color: white !important;
+        border: 2px solid white !important;
+        border-radius: 4px !important;
+        padding: 10px 15px !important;
+        font-size: 28px !important;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3) !important;
+        cursor: pointer !important;
+        line-height: 1 !important;
+        transition: all 0.3s ease !important;
+        text-decoration: none !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        pointer-events: auto !important;
+    }
+
+    /* Admin bar adjustment */
+    .admin-bar #fallback-mobile-menu {
+        top: 71px !important;
+    }
+} 

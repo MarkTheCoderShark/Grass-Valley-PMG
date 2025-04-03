@@ -1,0 +1,108 @@
+/* Responsive Styles */
+@media screen and (max-width: 992px) {
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .faq-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .educational-content-section .content-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    body .statistics-section .statistics-grid {
+        grid-template-columns: repeat(3, minmax(200px, 1fr));
+        gap: 2rem;
+        padding: 0 1.5rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hero-section {
+        min-height: 70vh;
+        padding: 6rem 0 4rem;
+        background-position: center center;
+    }
+
+    .hero-title {
+        font-size: 2.75rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .about-content,
+    .contact-content {
+        grid-template-columns: 1fr;
+    }
+    
+    body .statistics-section .statistics-description {
+        font-size: 1.1rem;
+        padding: 0 1.5rem;
+        margin-bottom: 2rem;
+    }
+    
+    body .statistics-section .statistics-grid {
+        grid-template-columns: repeat(1, 1fr);
+        max-width: 500px;
+        gap: 2rem;
+    }
+    
+    body .statistics-section .stat-card {
+        min-height: 200px;
+        padding: 2rem;
+    }
+    
+    body .statistics-section .stat-card .stat-number {
+        font-size: 2.5rem;
+    }
+    
+    body .statistics-section .stat-card .stat-label {
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .faq-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .educational-content-section {
+        padding: 3rem 0;
+    }
+    
+    .educational-content-section .content-card {
+        padding: 2rem;
+    }
+    
+    .educational-content-section .content-card h3 {
+        font-size: 1.5rem;
+    }
+    
+    body .statistics-section .statistics-grid {
+        grid-template-columns: repeat(1, 1fr);
+        max-width: 500px;
+        gap: 2rem;
+    }
+    
+    body .statistics-section .stat-card {
+        padding: 2.5rem 1.5rem;
+        min-height: 180px;
+    }
+    
+    body .statistics-section .stat-card .stat-number {
+        font-size: 3rem;
+    }
+    
+    body .statistics-section .stat-card .stat-label {
+        font-size: 1.1rem;
+    }
+} 

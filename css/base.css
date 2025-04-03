@@ -1,0 +1,45 @@
+/* Color Variables */
+:root {
+    --primary-blue: #1a4f8b;
+    --secondary-blue: #2c7be5;
+    --accent-blue: #e8f1ff;
+    --dark-blue: #0d2b4d;
+    --white: #ffffff;
+    --light-gray: #f8f9fa;
+    --text-dark: #2c3e50;
+    --text-light: #6c757d;
+}
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600;700&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    padding-top: 80px;
+}
+
+/* Remove extra padding on homepage where we have the hero section */
+body.home {
+    padding-top: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Common Utility Classes */
+.section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+} 

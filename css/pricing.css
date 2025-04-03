@@ -1,0 +1,326 @@
+/* Pricing Page Styles */
+
+/* Pricing Hero Section */
+.pricing-hero {
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    padding: 6rem 0 4rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.pricing-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background-image: radial-gradient(circle at 50% 50%, rgba(44, 123, 229, 0.03) 0%, rgba(44, 123, 229, 0) 70%);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-light);
+    margin-bottom: 3rem;
+}
+
+.hero-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    margin-top: 4rem;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 2rem;
+}
+
+.stat-item {
+    background: var(--white);
+    padding: 2.5rem 2rem;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(44, 123, 229, 0.1);
+    border: 1px solid rgba(44, 123, 229, 0.1);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.stat-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: linear-gradient(90deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.stat-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(44, 123, 229, 0.15);
+}
+
+.stat-item:hover::before {
+    opacity: 1;
+}
+
+.stat-number {
+    display: block;
+    font-size: 4rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1rem;
+    line-height: 1;
+    position: relative;
+}
+
+.stat-label {
+    display: block;
+    font-size: 1.25rem;
+    color: var(--text-dark);
+    font-weight: 600;
+    padding: 0.5rem 0;
+    position: relative;
+}
+
+.stat-label::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: var(--primary-blue);
+    margin: 1rem auto 0;
+    border-radius: 2px;
+    opacity: 0.3;
+}
+
+@media (max-width: 992px) {
+    .hero-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        padding: 0 1.5rem;
+    }
+    
+    .hero-title {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .pricing-hero {
+        padding: 4rem 0 3rem;
+    }
+
+    .hero-stats {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .stat-item {
+        padding: 2rem;
+    }
+    
+    .stat-number {
+        font-size: 3.5rem;
+    }
+    
+    .stat-label {
+        font-size: 1.1rem;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+}
+
+/* Pricing Plans Section */
+.pricing-plans-section {
+    padding: 5rem 0;
+    background-color: var(--light-gray);
+}
+
+.pricing-notice {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--white);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 3rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.pricing-notice i {
+    color: var(--primary-blue);
+    font-size: 1.5rem;
+    margin-right: 1rem;
+}
+
+.pricing-notice p {
+    margin: 0;
+    font-weight: 500;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.pricing-card {
+    background: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.pricing-card.featured {
+    border: 2px solid var(--primary-blue);
+}
+
+.featured-badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: var(--primary-blue);
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border-bottom-left-radius: 8px;
+}
+
+.pricing-header {
+    padding: 2rem;
+    text-align: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.pricing-header h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+}
+
+.pricing-price {
+    margin-bottom: 1rem;
+}
+
+.pricing-price .amount {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--primary-blue);
+}
+
+.pricing-price .period {
+    font-size: 1rem;
+    color: var(--text-light);
+}
+
+.pricing-description {
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+.pricing-features {
+    list-style: none;
+    padding: 2rem;
+    margin: 0;
+}
+
+.pricing-features li {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.pricing-features li i {
+    color: var(--primary-blue);
+    margin-right: 0.5rem;
+}
+
+.pricing-footer {
+    padding: 2rem;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.02);
+}
+
+.setup-fee {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+}
+
+/* Pricing FAQ Section */
+.pricing-faq {
+    margin-top: 4rem;
+}
+
+.pricing-faq h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--text-dark);
+    font-size: 2.5rem;
+}
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.faq-item {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.faq-item h3 {
+    color: var(--primary-blue);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.faq-item p {
+    color: var(--text-light);
+    line-height: 1.6;
+} 
